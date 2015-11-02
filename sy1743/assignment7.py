@@ -23,7 +23,7 @@ try:
 
     #b
     print "\n The answer of Question 1, (b) is"
-    print m2day.make_2D_array(5, 3, 1, 15)[:, 1]
+    print m2day.make_2D_array(5, 3, 1, 15)[:, 1:2]
 
     #c
     print "\n The answer of Question 1, (c) is"

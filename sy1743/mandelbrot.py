@@ -5,7 +5,7 @@ import numpy as np
 # Question 4
 
 
-def mandelbrot(x, y):
+class mandelbrot(object):
 
     """
     The mandelbrot function would take two values, x and y.
@@ -13,15 +13,21 @@ def mandelbrot(x, y):
     true, elsewise it returns false.
     """
 
-    N_max = 50
-    some_threshold = 50
-    c = x + 1j*y
-    z = c
-    for v in range(N_max):
-        z = z**2 + c
-        if abs(z) >= some_threshold:
-            return False
-    return True
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        self.N_max = 50
+        self.some_threshold = 50
+
+
+def mandelbrot_check(mande):
+        c = mande.x + 1j*mande.y
+        z = c
+        for v in range(mande.N_max):
+            z = z**2 + c
+            if abs(z) >= mande.some_threshold:
+                return False
+        return True
 
 
 def mandelbort_set(xmin, xmax, ymin, ymax):
@@ -38,7 +44,7 @@ def mandelbort_set(xmin, xmax, ymin, ymax):
  
     for pos_y, y in enumerate(Y):           # use for loop to do interation on x and y
         for pos_x, x in enumerate(X):
-            mask[pos_y,pos_x] = mandelbrot(x, y)
+            mask[pos_x,pos_y] = mandelbrot_check(mandelbrot(x, y))
     return mask
 
 
