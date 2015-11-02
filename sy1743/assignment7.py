@@ -44,12 +44,12 @@ try:
     print cl5.close_to_5()
 
     # Question 4
+    print "\n Generating plot.........."
     mask = mand.mandelbort_set(-2, 1, -1.5, 1.5)
     print "\n The plot of question 4 is saved as 'mandelbrot.png' in the current dictory."
     plt.imshow(mask.T, extent=[-2, 1, -1.5, 1.5])
     plt.gray()
     plt.savefig('mandelbrot.png')
-    plt.show()
 
 except KeyboardInterrupt, ValueError:
     print "\n Interrupted!"
