@@ -36,6 +36,7 @@ def mandelbort_set(xmin, xmax, ymin, ymax):
     The mandelbort_set function takes four inputs, xmin, xman, ymin and y max,
     as range of x and y respectively.
     It will return a 2-D boolean mask indicating which points are in the set.
+    Get help from: http://rosettacode.org/wiki/Mandelbrot_set
     """
 
     X = np.arange(xmin, xmax, .005)
