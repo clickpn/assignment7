@@ -53,6 +53,10 @@ try:
 
 except KeyboardInterrupt, ValueError:
     print "\n Interrupted!"
+except ArithmeticError, OverflowError:
+    print "\n Math Error"
+except ZeroDivisionError:
+    print "\n Math Error"
 except TypeError:
     print "\n Type Wrong!"
 except EOFError:
